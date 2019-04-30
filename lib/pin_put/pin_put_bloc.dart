@@ -57,7 +57,7 @@ class PinPutBloc {
 
   void _focusNext(String s, int i) {
     if (s.isNotEmpty) {
-      if (i + 1 == fieldsCount) {
+      if (_isFilled()) {
         _submit();
       } else
         FocusScope.of(context).requestFocus(nodes[i + 1]);
